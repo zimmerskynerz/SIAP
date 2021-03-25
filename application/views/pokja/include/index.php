@@ -35,9 +35,9 @@
             </ul>
         </nav>
         <!-- Main Sidebar Container -->
-        <?php $this->load->view('ppk/include/menu_bar') ?>
+        <?php $this->load->view('pokja/include/menu_bar') ?>
         <!-- Content Wrapper. Contains page content -->
-        <?php $this->load->view('ppk/' . $folder . '/' . $halaman . '') ?>
+        <?php $this->load->view('pokja/' . $folder . '/' . $halaman . '') ?>
         <!-- /.content-wrapper -->
         <footer class="main-footer">
             <div class="float-right d-none d-sm-block">
@@ -88,7 +88,7 @@
             });
         });
     </script>
-    <script src="<?= base_url('assets/') ?>notif_ppk.js"></script>
+    <script src="<?= base_url('assets/') ?>notif_pokja.js"></script>
 </body>
 
 </html>

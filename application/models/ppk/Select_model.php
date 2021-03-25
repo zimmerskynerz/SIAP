@@ -47,4 +47,36 @@ class Select_model extends CI_Model
         $query = $this->db->get();
         return $query->row_array();
     }
+    function getDataReview($id_login)
+    {
+        $query = $this->db->select('*');
+        $query = $this->db->from('tbl_pengajuan as A');
+        $query = $this->db->join('tbl_login as B', 'A.id_login=B.id_login');
+        $query = $this->db->join('tbl_identitas as C', 'B.id_login=C.id_login');
+        $query = $this->db->join('tbl_pokja as E', 'E.id_pengajuan=A.id_pengajuan');
+        $query = $this->db->join('tbl_opd as D', 'C.id_opd=D.id_opd');
+        $query = $this->db->where('A.id_login', $id_login);
+        $query = $this->db->where('A.status_pengajuan', 'VERIFIKASI');
+        $query  = $this->db->order_by('A.id_pengajuan', 'DESC');
+        $query = $this->db->get();
+        return $query->result();
+    }
+    function getDataKetuaPokja($id_pengajuan)
+    {
+        $query = $this->db->select('*');
+        $query = $this->db->from('tbl_pokja as A');
+        $query = $this->db->join('tbl_identitas as B', 'A.id_login=B.id_login');
+        $query = $this->db->where('A.id_pengajuan', $id_pengajuan);
+        $query = $this->db->get();
+        return $query->row_array();
+    }
+    function getDataAnggotaPokja($id_pokja)
+    {
+        $query = $this->db->select('*');
+        $query = $this->db->from('anggota_pokja as A');
+        $query = $this->db->join('tbl_identitas as B', 'A.id_login=B.id_login');
+        $query = $this->db->where('A.id_pokja', $id_pokja);
+        $query = $this->db->get();
+        return $query->result();
+    }
 }

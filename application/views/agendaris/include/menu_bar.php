@@ -77,7 +77,7 @@
                                 <p>Review</p>
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a href="<?= base_url('agendaris/administrasi/') ?>proses" class="nav-link <?= $this->uri->segment(3) == 'proses' ? 'active' : '' ?>">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Proses</p>
@@ -88,7 +88,7 @@
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Selesai</p>
                             </a>
-                        </li>
+                        </li> -->
                     </ul>
                 </li>
                 <!-- Button Profile -->

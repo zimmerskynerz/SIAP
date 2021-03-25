@@ -37,6 +37,8 @@ $route['agendaris/administrasi/detailpengajuan/(:any)']       = 'agendaris/Contr
 // Sub Menu Review
 $route['agendaris/administrasi/review']                       = 'agendaris/ControllerAdministrasi/review';
 $route['agendaris/administrasi/detailreview/(:any)']          = 'agendaris/ControllerAdministrasi/detailreview/$1';
+// Sub Menu Berita Acara
+$route['agendaris/administrasi/berita_acara/(:any)']          = 'agendaris/COntrollerAdministrasi/berita_acara/$1';
 
 // PPK
 // Menu Beranda
@@ -48,3 +50,19 @@ $route['ppk/administrasi']                                    = 'ppk/ControllerA
 $route['ppk/administrasi/pengajuan']                          = 'ppk/ControllerAdministrasi/pengajuan';
 $route['ppk/administrasi/detailpengajuan/(:any)']             = 'ppk/ControllerAdministrasi/detailpengajuan/$1';
 $route['ppk/administrasi/crudpengajuan']                      = 'ppk/ControllerAdministrasi/crudpengajuan';
+// Sub Menu Pengajuan
+$route['ppk/administrasi/review']                             = 'ppk/ControllerAdministrasi/review';
+$route['ppk/administrasi/detailreview/(:any)']                = 'ppk/ControllerAdministrasi/detailreview/$1';
+$route['ppk/administrasi/berita_acara/(:any)']                = 'ppk/COntrollerAdministrasi/berita_acara/$1';
+
+// POKJA
+// Menu Beranda
+$route['pokja']                                               = 'pokja/ControllerBeranda/index';
+$route['pokja/beranda']                                       = 'pokja/ControllerBeranda/index';
+// Menu Administrasi
+$route['pokja/administrasi']                                  = 'pokja/ControllerAdministrasi/index';
+// Sub Menu Administrasi->Review
+$route['pokja/administrasi/review']                           = 'pokja/ControllerAdministrasi/review';
+$route['pokja/administrasi/detail_review/(:any)']             = 'pokja/ControllerAdministrasi/detail_review/$1';
+$route['pokja/administrasi/crudreview']                       = 'pokja/ControllerAdministrasi/crudreview';
+$route['pokja/administrasi/berita_acara/(:any)']              = 'pokja/COntrollerAdministrasi/berita_acara/$1';

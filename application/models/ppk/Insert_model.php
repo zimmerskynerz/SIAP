@@ -42,6 +42,7 @@ class Insert_model extends CI_Model
                     $data['id_berkas'] = '';
                     $data['nm_berkas'] = $keterangan_berkas[$i];
                     $data['link_berkas'] = $uploadData['file_name'];
+                    $data['komentar'] = null;
                     $this->db->insert('tbl_berkas', $data);
                 }
             }

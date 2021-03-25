@@ -1,29 +1,15 @@
 // CRUD Berkas Pengajuan
-$('.berhasil_upload_berkas').show(function() {
+$('.berhasil_tambah_komentar').show(function() {
     Swal.fire(
         'Berhasil!',
-        'Berkas Persyaratan Berhasil Dikirim!',
+        'Berkas Persyaratan Berhasil Dikonfirmasi!',
         'success'
     )
 })
-$('.berhasil_ubah_berkas').show(function() {
+$('.berhasil_simpan_konfirmasi').show(function() {
     Swal.fire(
         'Berhasil!',
-        'Berkas Persyaratan Berhasil Diupdate!',
-        'success'
-    )
-})
-$('.gagal_ubah_berkas').show(function() {
-    Swal.fire(
-        'Berhasil!',
-        'Berkas Persyaratan Gagal Diupdate!',
-        'error'
-    )
-})
-$('.berhasil_kirim_berkas').show(function() {
-    Swal.fire(
-        'Berhasil!',
-        'Berkas Persyaratan Berhasil Dikirim!',
+        'Berhasil Konfirmasi Pengajuan!',
         'success'
     )
 })

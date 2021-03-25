@@ -39,21 +39,9 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?= base_url('ppk/administrasi/') ?>proses" class="nav-link <?= $this->uri->segment(3) == 'proses' ? 'active' : '' ?>">
+                            <a href="<?= base_url('ppk/administrasi/') ?>review" class="nav-link <?= $this->uri->segment(3) == 'review' ? 'active' : '' ?>">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Proses</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="<?= base_url('ppk/administrasi/') ?>selesai" class="nav-link <?= $this->uri->segment(3) == 'selesai' ? 'active' : '' ?>">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Selesai</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="<?= base_url('ppk/administrasi/') ?>tolak" class="nav-link <?= $this->uri->segment(3) == 'tolak' ? 'active' : '' ?>">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Tolak</p>
+                                <p>Review</p>
                             </a>
                         </li>
                     </ul>

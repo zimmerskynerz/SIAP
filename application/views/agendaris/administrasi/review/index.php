@@ -41,7 +41,12 @@
                                             <td><?= $Data_pengajuan->nama ?></td>
                                             <td><?= $Data_pengajuan->nm_kegiatan ?></td>
                                             <td><?= $Data_pengajuan->nm_opd ?></td>
-                                            <td><?= date('d F Y', strtotime($Data_pengajuan->tgl_review)) ?></td>
+                                            <td><?= date('d F Y', strtotime($Data_pengajuan->tgl_review)) ?><br>
+                                                <?php if ($Data_pengajuan->status_ba != 'KONFIRMASI') :
+                                                    echo 'PROJEK ' . $Data_pengajuan->status_ba;
+                                                endif;
+                                                ?>
+                                            </td>
                                             <td class="text-center">
                                                 <a href="<?= base_url('agendaris/administrasi/detailreview/' . $Data_pengajuan->id_pengajuan . '') ?>">
                                                     <i class="fas fa-edit"></i>
