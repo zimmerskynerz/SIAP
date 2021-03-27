@@ -141,6 +141,94 @@ class ControllerAdministrasi extends CI_Controller
             $this->load->view('login');
         endif;
     }
+    public function diterima()
+    {
+        $cek_email = $this->db->get_where('tbl_login', ['email' => $this->session->userdata('email')])->row_array();
+        if ($cek_email['level'] == 'AGENDARIS') :
+            $data_pengajuan   = $this->select_model->getDataPengajuanDiterima();
+            $data = array(
+                'judul'          => 'ADMINISTRASI',
+                'folder'         => 'administrasi/diterima',
+                'halaman'        => 'index',
+                // Data Database Pengajuan
+                'data_pengajuan' => $data_pengajuan
+            );
+            $this->load->view('agendaris/include/index', $data);
+        else :
+            $this->load->view('login');
+        endif;
+    }
+    public function detailditerima($id)
+    {
+        $id_pengajuan = $id;
+        $cek_email = $this->db->get_where('tbl_login', ['email' => $this->session->userdata('email')])->row_array();
+        if ($cek_email['level'] == 'AGENDARIS') :
+            $data_pengajuan = $this->select_model->getDataPengajuanDetail($id_pengajuan);
+            $data_berkas    = $this->db->get_where('tbl_berkas', ['id_pengajuan' => $id_pengajuan])->result();
+            $jml_berkas     = count($data_berkas);
+            $data_ketua     = $this->select_model->getDataKetuaPokja($id_pengajuan);
+            $id_pokja       = $data_ketua['id_pokja'];
+            $data_anggota   = $this->select_model->getDataAnggotaPokja($id_pokja);
+            $data = array(
+                'judul'          => 'ADMINISTRASI',
+                'folder'         => 'administrasi/diterima',
+                'halaman'        => 'detailditerima',
+                // Data Pengajuan
+                'data_pengajuan' => $data_pengajuan,
+                'data_berkas'    => $data_berkas,
+                'jml_berkas'     => $jml_berkas,
+                'data_ketua'     => $data_ketua,
+                'data_anggota'   => $data_anggota
+            );
+            $this->load->view('agendaris/include/index', $data);
+        else :
+            $this->load->view('login');
+        endif;
+    }
+    public function ditolak()
+    {
+        $cek_email = $this->db->get_where('tbl_login', ['email' => $this->session->userdata('email')])->row_array();
+        if ($cek_email['level'] == 'AGENDARIS') :
+            $data_pengajuan   = $this->select_model->getDataPengajuanDitolak();
+            $data = array(
+                'judul'          => 'ADMINISTRASI',
+                'folder'         => 'administrasi/ditolak',
+                'halaman'        => 'index',
+                // Data Database Pengajuan
+                'data_pengajuan' => $data_pengajuan
+            );
+            $this->load->view('agendaris/include/index', $data);
+        else :
+            $this->load->view('login');
+        endif;
+    }
+    public function detaildiditolak($id)
+    {
+        $id_pengajuan = $id;
+        $cek_email = $this->db->get_where('tbl_login', ['email' => $this->session->userdata('email')])->row_array();
+        if ($cek_email['level'] == 'AGENDARIS') :
+            $data_pengajuan = $this->select_model->getDataPengajuanDetail($id_pengajuan);
+            $data_berkas    = $this->db->get_where('tbl_berkas', ['id_pengajuan' => $id_pengajuan])->result();
+            $jml_berkas     = count($data_berkas);
+            $data_ketua     = $this->select_model->getDataKetuaPokja($id_pengajuan);
+            $id_pokja       = $data_ketua['id_pokja'];
+            $data_anggota   = $this->select_model->getDataAnggotaPokja($id_pokja);
+            $data = array(
+                'judul'          => 'ADMINISTRASI',
+                'folder'         => 'administrasi/ditolak',
+                'halaman'        => 'detailditolak',
+                // Data Pengajuan
+                'data_pengajuan' => $data_pengajuan,
+                'data_berkas'    => $data_berkas,
+                'jml_berkas'     => $jml_berkas,
+                'data_ketua'     => $data_ketua,
+                'data_anggota'   => $data_anggota
+            );
+            $this->load->view('agendaris/include/index', $data);
+        else :
+            $this->load->view('login');
+        endif;
+    }
     public function berita_acara($id)
     {
         $id_pengajuan = $id;

@@ -20,7 +20,8 @@ class ControllerAdministrasi extends CI_Controller
     {
         $cek_email = $this->db->get_where('tbl_login', ['email' => $this->session->userdata('email')])->row_array();
         if ($cek_email['level'] == 'PPK') :
-            $data_pengajuan = $this->select_model->getDataPengajuan();
+            $id_login = $cek_email['id_login'];
+            $data_pengajuan = $this->select_model->getDataPengajuan($id_login);
             $data_pokja     = $this->db->get_where('tbl_pokja')->result();
             $data = array(
                 'judul'          => 'ADMINISTRASI',
@@ -75,6 +76,7 @@ class ControllerAdministrasi extends CI_Controller
             $data_pengajuan = $this->select_model->getDataPengajuanDetail($id_pengajuan);
             $data_berkas    = $this->db->get_where('tbl_berkas', ['id_pengajuan' => $id_pengajuan])->result();
             $data_konfirmasi = $this->select_model->getDataKonfirmasi($id_pengajuan);
+            $data_ketua     = $this->select_model->getDataKetuaPokja($id_pengajuan);
             $jml_berkas     = count($data_berkas);
             $data = array(
                 'judul'          => 'ADMINISTRASI',
@@ -84,7 +86,8 @@ class ControllerAdministrasi extends CI_Controller
                 'data_pengajuan' => $data_pengajuan,
                 'data_berkas'    => $data_berkas,
                 'jml_berkas'     => $jml_berkas,
-                'data_konfirmasi' => $data_konfirmasi
+                'data_konfirmasi' => $data_konfirmasi,
+                'data_ketua'     => $data_ketua
             );
             $this->load->view('ppk/include/index', $data);
         else :

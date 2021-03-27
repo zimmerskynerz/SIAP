@@ -12,7 +12,7 @@ class Select_model extends CI_Model
         $query  = $this->db->join('tbl_pengajuan as C', 'C.id_pengajuan=B.id_pengajuan');
         $query  = $this->db->where('A.id_login', $id_login);
         $query  = $this->db->or_where('B.id_login', $id_login);
-        $query  = $this->db->group_by('B.id_pokja');
+        $query  = $this->db->group_by('B.id_pokja', 'desc');
         $query  = $this->db->get();
         return $query->result();
     }

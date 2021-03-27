@@ -37,6 +37,12 @@ $route['agendaris/administrasi/detailpengajuan/(:any)']       = 'agendaris/Contr
 // Sub Menu Review
 $route['agendaris/administrasi/review']                       = 'agendaris/ControllerAdministrasi/review';
 $route['agendaris/administrasi/detailreview/(:any)']          = 'agendaris/ControllerAdministrasi/detailreview/$1';
+// Sub Menu Diterima dan Ditolak
+$route['agendaris/administrasi/diterima']                       = 'agendaris/ControllerAdministrasi/diterima';
+$route['agendaris/administrasi/detailditerima/(:any)']          = 'agendaris/ControllerAdministrasi/detailditerima/$1';
+$route['agendaris/administrasi/ditolak']                        = 'agendaris/ControllerAdministrasi/ditolak';
+$route['agendaris/administrasi/detailditolak/(:any)']           = 'agendaris/ControllerAdministrasi/detailditolak/$1';
+
 // Sub Menu Berita Acara
 $route['agendaris/administrasi/berita_acara/(:any)']          = 'agendaris/COntrollerAdministrasi/berita_acara/$1';
 
@@ -54,6 +60,9 @@ $route['ppk/administrasi/crudpengajuan']                      = 'ppk/ControllerA
 $route['ppk/administrasi/review']                             = 'ppk/ControllerAdministrasi/review';
 $route['ppk/administrasi/detailreview/(:any)']                = 'ppk/ControllerAdministrasi/detailreview/$1';
 $route['ppk/administrasi/berita_acara/(:any)']                = 'ppk/COntrollerAdministrasi/berita_acara/$1';
+// Menu Profile
+$route['ppk/profile']                                         = 'ppk/ControllerProfile/index';
+$route['ppk/crudprofile']                                     = 'ppk/ControllerProfile/crudprofile';
 
 // POKJA
 // Menu Beranda
@@ -66,3 +75,6 @@ $route['pokja/administrasi/review']                           = 'pokja/Controlle
 $route['pokja/administrasi/detail_review/(:any)']             = 'pokja/ControllerAdministrasi/detail_review/$1';
 $route['pokja/administrasi/crudreview']                       = 'pokja/ControllerAdministrasi/crudreview';
 $route['pokja/administrasi/berita_acara/(:any)']              = 'pokja/COntrollerAdministrasi/berita_acara/$1';
+// Menu Profile
+$route['pokja/profile']                                       = 'pokja/ControllerProfile/index';
+$route['pokja/crudprofile']                                   = 'pokja/ControllerProfile/crudprofile';

@@ -20,6 +20,11 @@ class Update_model extends CI_Model
             );
             $this->db->where('id_pokja', $this->input->post('id_pokja'));
             $this->db->update('tbl_pokja', $data);
+            $data_pengjauan = array(
+                'status_pengajuan'  => 'DITERIMA'
+            );
+            $this->db->where('id_pengajuan', $this->input->post('id_pengajuan'));
+            $this->db->update('tbl_pengajuan', $data_pengjauan);
         else :
             $data = array(
                 'status_ba'    => 'TOLAK',
@@ -27,6 +32,11 @@ class Update_model extends CI_Model
             );
             $this->db->where('id_pokja', $this->input->post('id_pokja'));
             $this->db->update('tbl_pokja', $data);
+            $data_pengjauan = array(
+                'status_pengajuan'  => 'DITOLAK'
+            );
+            $this->db->where('id_pengajuan', $this->input->post('id_pengajuan'));
+            $this->db->update('tbl_pengajuan', $data_pengjauan);
         endif;
     }
 }

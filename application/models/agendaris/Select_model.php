@@ -39,6 +39,30 @@ class Select_model extends CI_Model
         $query = $this->db->get();
         return $query->result();
     }
+    function getDataPengajuanDiterima()
+    {
+        $query = $this->db->select('*');
+        $query = $this->db->from('tbl_pengajuan as A');
+        $query = $this->db->join('tbl_login as B', 'A.id_login=B.id_login');
+        $query = $this->db->join('tbl_identitas as C', 'B.id_login=C.id_login');
+        $query = $this->db->join('tbl_opd as D', 'C.id_opd=D.id_opd');
+        $query = $this->db->where('A.status_pengajuan', 'DITERIMA');
+        $query  = $this->db->order_by('A.id_pengajuan', 'DESC');
+        $query = $this->db->get();
+        return $query->result();
+    }
+    function getDataPengajuanDitolak()
+    {
+        $query = $this->db->select('*');
+        $query = $this->db->from('tbl_pengajuan as A');
+        $query = $this->db->join('tbl_login as B', 'A.id_login=B.id_login');
+        $query = $this->db->join('tbl_identitas as C', 'B.id_login=C.id_login');
+        $query = $this->db->join('tbl_opd as D', 'C.id_opd=D.id_opd');
+        $query = $this->db->where('A.status_pengajuan', 'DITOLAK');
+        $query  = $this->db->order_by('A.id_pengajuan', 'DESC');
+        $query = $this->db->get();
+        return $query->result();
+    }
     function getDataPengajuanDetail($id_pengajuan)
     {
         $query = $this->db->select('*');

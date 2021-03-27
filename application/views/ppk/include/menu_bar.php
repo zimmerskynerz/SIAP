@@ -23,28 +23,13 @@
                     </a>
                 </li>
                 <!-- Menu Pengajuan -->
-                <li class="nav-item <?= $this->uri->segment(2) == 'administrasi' ? 'menu-open' : '' ?>">
-                    <a href="#" class="nav-link <?= $this->uri->segment(2) == 'administrasi' ? 'active' : '' ?>">
+                <li class="nav-item">
+                    <a href="<?= base_url('ppk/administrasi/pengajuan') ?>" class="nav-link <?= $this->uri->segment(2) == 'administrasi' ? 'active' : '' ?>">
                         <i class="nav-icon fas fa-copy"></i>
                         <p>
                             Administrasi
-                            <i class="right fas fa-angle-right"></i>
                         </p>
                     </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="<?= base_url('ppk/administrasi/') ?>pengajuan" class="nav-link <?= $this->uri->segment(3) == 'pengajuan' ? 'active' : '' ?>">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Pengajuan</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="<?= base_url('ppk/administrasi/') ?>review" class="nav-link <?= $this->uri->segment(3) == 'review' ? 'active' : '' ?>">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Review</p>
-                            </a>
-                        </li>
-                    </ul>
                 </li>
                 <!-- Button Profile -->
                 <li class="nav-item">

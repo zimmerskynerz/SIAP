@@ -77,18 +77,18 @@
                                 <p>Review</p>
                             </a>
                         </li>
-                        <!-- <li class="nav-item">
-                            <a href="<?= base_url('agendaris/administrasi/') ?>proses" class="nav-link <?= $this->uri->segment(3) == 'proses' ? 'active' : '' ?>">
+                        <li class="nav-item">
+                            <a href="<?= base_url('agendaris/administrasi/') ?>diterima" class="nav-link <?= $this->uri->segment(3) == 'diterima' ? 'active' : '' ?>">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Proses</p>
+                                <p>Diterima</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?= base_url('agendaris/administrasi/') ?>selesai" class="nav-link <?= $this->uri->segment(3) == 'selesai' ? 'active' : '' ?>">
+                            <a href="<?= base_url('agendaris/administrasi/') ?>ditolak" class="nav-link <?= $this->uri->segment(3) == 'ditolak' ? 'active' : '' ?>">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Selesai</p>
+                                <p>Ditolak</p>
                             </a>
-                        </li> -->
+                        </li>
                     </ul>
                 </li>
                 <!-- Button Profile -->

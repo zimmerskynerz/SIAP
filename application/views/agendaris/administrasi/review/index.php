@@ -71,4 +71,3 @@
     </section>
     <!-- /.content -->
 </div>
-<?php $this->load->view('ppk/administrasi/pengajuan/tambah_data_pertama') ?>

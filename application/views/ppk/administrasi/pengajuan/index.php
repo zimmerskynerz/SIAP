@@ -66,8 +66,20 @@
                                                     echo 'REVISI PENGKAJIAN';
                                                 elseif ($Data_pengajuan->status_pengajuan == 'TOLAK_KAJI') :
                                                     echo 'KEGIATAN DITOLAK';
+                                                elseif ($Data_pengajuan->status_pengajuan == 'DITERIMA') :
+                                                    echo 'DOKUMEN DITERIMA';
+                                                    foreach ($data_pokja as $Data_pokja) :
+                                                        if ($Data_pengajuan->id_pengajuan == $Data_pokja->id_pengajuan) :
+                                                            echo  '<br>Review : ' . date('d F Y', strtotime($Data_pokja->tgl_review)) . '';
+                                                        endif;
+                                                    endforeach;
                                                 else :
-                                                    echo 'KEGIATAN PROSES';
+                                                    echo 'KEGIATAN DITOLAK SILAHKAN AJUKAN ULANG';
+                                                    foreach ($data_pokja as $Data_pokja) :
+                                                        if ($Data_pengajuan->id_pengajuan == $Data_pokja->id_pengajuan) :
+                                                            echo  '<br>Alasan : ' . $Data_pokja->alasan . '';
+                                                        endif;
+                                                    endforeach;
                                                 endif;
                                                 ?>
                                             </td>

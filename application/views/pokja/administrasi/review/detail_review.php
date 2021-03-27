@@ -129,6 +129,7 @@
                         <option value="3">Tolak Pengadaan</option>
                     </select>
                     <input id="id_pokja" name="id_pokja" type="text" hidden value="<?= $data_ketua['id_pokja'] ?>" class="form-control" placeholder="Masukkan Nama Organisasi Perangkat Daerah" required>
+                    <input id="id_pengajuan" name="id_pengajuan" type="text" hidden value="<?= $data_ketua['id_pengajuan'] ?>" class="form-control" placeholder="Masukkan Nama Organisasi Perangkat Daerah" required>
                 </div>
                 <div class="form-group" id="alasan_baru">
                     <textarea id="alasan" name="alasan" type="text" value="" class="form-control" placeholder="Masukkan Alasan DItolak"></textarea>

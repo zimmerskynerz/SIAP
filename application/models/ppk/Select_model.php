@@ -4,15 +4,14 @@ class Select_model extends CI_Model
 {
     // Data PPK
     // Select * from tbl_login as A join tbl_identitas as B on A.id_login=B.id_login join tbl_opd as C on B.id_opd=C.id_opd where A.status = 'ADA' and C.status='ADA'
-    function getDataPengajuan()
+    function getDataPengajuan($id_login)
     {
         $query  = $this->db->select('*');
         $query  = $this->db->from('tbl_pengajuan as A');
         $query  = $this->db->join('tbl_login as B', 'A.id_login=B.id_login');
         $query  = $this->db->join('tbl_identitas as C', 'C.id_login=B.id_login');
-        $query  = $this->db->where('A.id_login', $this->session->userdata('id_login'));
+        $query  = $this->db->where('A.id_login', $id_login);
         $query  = $this->db->where('A.status_pengajuan !=', 'SELESAI');
-        $query  = $this->db->or_where('A.status_pengajuan !=', 'PROSES');
         $query  = $this->db->order_by('A.id_pengajuan', 'DESC');
         $query  = $this->db->get();
         return $query->result();
