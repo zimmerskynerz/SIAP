@@ -10,6 +10,10 @@ $route['translate_uri_dashes'] = FALSE;
 $route['login']                                               = 'ControllerLogin/index';
 $route['cek_login']                                           = 'ControllerLogin/cek_login';
 $route['logout']                                              = 'ControllerLogin/logout';
+$route['tentang']                                             = 'ControllerLogin/tentang';
+$route['alur-pengajuan']                                      = 'ControllerLogin/alur';
+$route['daftar-opd']                                          = 'ControllerLogin/opd';
+$route['persyaratan']                                         = 'ControllerLogin/persyaratan';
 // Kepala
 // Menu Utama
 $route['kepala']                                           = 'kepala/ControllerBeranda/index';

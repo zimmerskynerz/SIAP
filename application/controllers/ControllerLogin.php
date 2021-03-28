@@ -65,6 +65,26 @@ class ControllerLogin extends CI_Controller
         $this->session->sess_destroy();
         redirect('login/');
     }
+    public function tentang()
+    {
+        # code...
+        $this->load->view('tentang');
+    }
+    public function alur()
+    {
+        # code...
+        $this->load->view('alur');
+    }
+    public function opd()
+    {
+        # code...
+        $this->load->view('opd');
+    }
+    public function persyaratan()
+    {
+        # code...
+        $this->load->view('persyaratan');
+    }
 }
         
     /* End of file  ControllerLogin.php */

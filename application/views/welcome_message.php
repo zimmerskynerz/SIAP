@@ -102,165 +102,10 @@
 
 
 								<!-- SIMPLE NAVIGATION LINK -->
-								<li class="nl-simple" aria-haspopup="true"><a href="about-us.html">About</a></li>
-
-
-								<!-- DROPDOWN MENU -->
-								<li aria-haspopup="true"><a href="#">Pages <span class="wsarrow"></span></a>
-									<div class="wsmegamenu clearfix halfmenu">
-										<div class="container-fluid">
-											<div class="row">
-
-												<!-- Links -->
-												<ul class="col-lg-6 col-md-12 col-xs-12 link-list">
-													<li><a href="about-us.html">About Us Page</a></li>
-													<li><a href="services.html">Services Page</a></li>
-													<li><a href="service-details.html">Service Details Page</a></li>
-													<li><a href="case-studies-1.html">Case Studies #1</a></li>
-													<li><a href="case-studies-2.html">Case Studies #2</a></li>
-													<li><a href="project-details.html">Single Project Page</a></li>
-													<li><a href="reviews.html">Customers Reviews</a></li>
-												</ul>
-
-												<!-- Links -->
-												<ul class="col-lg-6 col-md-12 col-xs-12 link-list">
-													<li><a href="resources.html">Resources Page</a></li>
-													<li><a href="pricing.html">Pricing Page</a></li>
-													<li><a href="team.html">Our Team Page</a></li>
-													<li><a href="faqs.html">FAQs Page</a></li>
-													<li><a href="blog-listing.html">Blog Listing Page</a></li>
-													<li><a href="single-post.html">Single Blog Post</a></li>
-													<li><a href="contats.html">Contact Us Page</a></li>
-												</ul>
-
-											</div>
-										</div>
-									</div>
-								</li> <!-- END DROPDOWN MENU -->
-
-
-								<!-- SIMPLE NAVIGATION LINK -->
-								<li class="nl-simple" aria-haspopup="true"><a href="services.html">Services</a></li>
-
-
-								<!-- MEGAMENU -->
-								<li aria-haspopup="true"><a href="#">Mega Menu <span class="wsarrow"></span></a>
-									<div class="wsmegamenu clearfix">
-										<div class="container">
-											<div class="row">
-
-
-												<!-- MEGAMENU QUICK LINKS -->
-												<div class="col-md-12 col-lg-3">
-
-													<!-- Title -->
-													<h3 class="title">Marketing Solutions:</h3>
-
-													<ul class="link-list">
-														<li><a href="#">Search Engine Optimization</a></li>
-														<li><a href="#">Web Design & Development</a></li>
-														<li><a href="#">Social Media Marketing</a></li>
-														<li><a href="#">Pay per Click (PPC)</a></li>
-														<li><a href="#">Video Production</a></li>
-														<li><a href="#">Content Marketing</a></li>
-														<li><a href="#">Email Marketing Campaigns</a></li>
-													</ul>
-
-												</div> <!-- END MEGAMENU QUICK LINKS -->
-
-
-												<!-- MEGAMENU FEATURED NEWS -->
-												<div class="col-md-12 col-lg-5">
-
-													<!-- Title -->
-													<h3 class="title">Featured News:</h3>
-
-													<!-- Image -->
-													<div class="fluid-width-video-wrapper mb-15"><img src="<?= base_url('assets/utama/') ?>images/blog/featured-news.jpg" alt="featured-news" /></div>
-
-													<!-- Text -->
-													<h5 class="h5-md">
-														<a href="single-post.html">Things to know while performing SEO for multiple location
-															businesses
-														</a>
-													</h5>
-													<p class="wsmwnutxt">Porta semper lacus cursus, feugiat primis ultrice in ligula risus auctor
-														tempus feugiat dolor impedit magna...
-													</p>
-
-												</div> <!-- END MEGAMENU FEATURED NEWS -->
-
-
-												<!-- MEGAMENU LATEST NEWS -->
-												<div class="col-md-12 col-lg-4">
-
-													<!-- Title -->
-													<h3 class="title">Latest News:</h3>
-
-													<!-- Latest News -->
-													<ul class="latest-news">
-
-														<!-- Post #1 -->
-														<li class="clearfix d-flex align-items-center">
-
-															<!-- Image -->
-															<img class="img-fluid" src="<?= base_url('assets/utama/') ?>images/blog/latest-post-1.jpg" alt="blog-post-preview" />
-
-															<!-- Text -->
-															<div class="post-summary">
-																<a href="single-post.html">Etiam sapien risus ante auctor tempus an accumsan...</a>
-																<p>03 hours ago</p>
-															</div>
-
-														</li>
-
-														<!-- Post #2 -->
-														<li class="clearfix d-flex align-items-center">
-
-															<!-- Image -->
-															<img class="img-fluid" src="<?= base_url('assets/utama/') ?>images/blog/latest-post-2.jpg" alt="blog-post-preview" />
-
-															<!-- Text -->
-															<div class="post-summary">
-																<a href="single-post.html">Blandit tempor sapien ipsum, porta risus auctor justo...
-																</a>
-																<p>Feb 02, 2020</p>
-															</div>
-
-														</li>
-
-														<!-- Post #3 -->
-														<li class="clearfix d-flex align-items-center">
-
-															<!-- Image -->
-															<img class="img-fluid" src="<?= base_url('assets/utama/') ?>images/blog/latest-post-3.jpg" alt="blog-post-preview" />
-
-															<!-- Text -->
-															<div class="post-summary">
-																<a href="single-post.html">Cursus risus an auctor risus laoreet undo auctor varius...</a>
-																<p>Jan 29, 2020</p>
-															</div>
-
-														</li>
-													</ul>
-												</div> <!-- END MEGAMENU LATEST NEWS -->
-
-
-											</div> <!-- End row -->
-										</div> <!-- End container -->
-									</div> <!-- End wsmegamenu -->
-								</li> <!-- END MEGAMENU -->
-
-
-								<!-- SIMPLE NAVIGATION LINK -->
-								<li class="nl-simple" aria-haspopup="true"><a href="case-studies-2.html">Case Studies</a></li>
-
-
-								<!-- SIMPLE NAVIGATION LINK -->
-								<li class="nl-simple" aria-haspopup="true"><a href="contacts.html">Contacts</a></li>
-
-
-								<!-- HEADER PHONE NUMBER -->
+								<li class="nl-simple" aria-haspopup="true"><a href="<?= base_url('tentang') ?>">Tentang</a></li>
+								<li class="nl-simple" aria-haspopup="true"><a href="<?= base_url('alur-pengajuan') ?>">Alur Pengajuan</a></li>
+								<li class="nl-simple" aria-haspopup="true"><a href="<?= base_url('daftar-opd') ?>">OPD</a></li>
+								<li class="nl-simple" aria-haspopup="true"><a href="<?= base_url('persyaratan') ?>">Persyaratan</a></li>
 								<li class="nl-simple primary-scroll" aria-haspopup="true">
 									<a href="tel:123456789" class="last-link last-link-number">
 										<i class="fas fa-phone-square-alt"></i> 855-569-7890
@@ -301,7 +146,7 @@
 							</p>
 
 							<!-- Button -->
-							<a href="about-us.html" class="btn btn-md btn-primary tra-white-hover">Discover More</a>
+							<a href="<?= base_url('login') ?>" class="btn btn-md btn-primary tra-white-hover">Mulai</a>
 
 						</div>
 					</div> <!-- END HERO TEXT -->
