@@ -202,9 +202,11 @@ class ControllerAdministrasi extends CI_Controller
             $this->load->view('login');
         endif;
     }
-    public function detaildiditolak($id)
+    public function detailditolak($id)
     {
         $id_pengajuan = $id;
+        // var_dump($id_pengajuan);
+        // die;
         $cek_email = $this->db->get_where('tbl_login', ['email' => $this->session->userdata('email')])->row_array();
         if ($cek_email['level'] == 'AGENDARIS') :
             $data_pengajuan = $this->select_model->getDataPengajuanDetail($id_pengajuan);
