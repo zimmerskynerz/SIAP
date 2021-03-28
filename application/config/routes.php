@@ -10,6 +10,31 @@ $route['translate_uri_dashes'] = FALSE;
 $route['login']                                               = 'ControllerLogin/index';
 $route['cek_login']                                           = 'ControllerLogin/cek_login';
 $route['logout']                                              = 'ControllerLogin/logout';
+// Kepala
+// Menu Utama
+$route['kepala']                                           = 'kepala/ControllerBeranda/index';
+$route['kepala/beranda']                                   = 'kepala/ControllerBeranda/index';
+// Cetak Laporan
+$route['kepala/cetak_laporan']                             = 'kepala/ControllerBeranda/cetak_laporan';
+// Menu Profile
+$route['kepala/profile']                                   = 'kepala/ControllerProfile/index';
+$route['kepala/crudprofile']                               = 'kepala/ControllerProfile/crudprofile';
+// Menu Administrasi
+$route['kepala/administrasi']                              = 'kepala/ControllerAdministrasi/index';
+// Sub Menu Pengajuan
+$route['kepala/administrasi/pengajuan']                    = 'kepala/ControllerAdministrasi/pengajuan';
+$route['kepala/administrasi/crudpengajuan']                = 'kepala/ControllerAdministrasi/crudpengajuan';
+$route['kepala/administrasi/detailpengajuan/(:any)']       = 'kepala/ControllerAdministrasi/detailpengajuan/$1';
+// Sub Menu Review
+$route['kepala/administrasi/review']                       = 'kepala/ControllerAdministrasi/review';
+$route['kepala/administrasi/detailreview/(:any)']          = 'kepala/ControllerAdministrasi/detailreview/$1';
+// Sub Menu Diterima dan Ditolak
+$route['kepala/administrasi/diterima']                       = 'kepala/ControllerAdministrasi/diterima';
+$route['kepala/administrasi/detailditerima/(:any)']          = 'kepala/ControllerAdministrasi/detailditerima/$1';
+$route['kepala/administrasi/ditolak']                        = 'kepala/ControllerAdministrasi/ditolak';
+$route['kepala/administrasi/detailditolak/(:any)']           = 'kepala/ControllerAdministrasi/detailditolak/$1';
+
+
 // Agendaris
 // Menu Utama
 $route['agendaris']                                           = 'agendaris/ControllerBeranda/index';
