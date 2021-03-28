@@ -19,9 +19,11 @@ class ControllerBeranda extends CI_Controller
             $jml_verifikasi = count($this->db->get_where('tbl_pengajuan', ['status_pengajuan' => 'VERIFIKASI'])->result());
             $jml_diterima   = count($this->db->get_where('tbl_pengajuan', ['status_pengajuan' => 'DITERIMA'])->result());
             $jml_ditolak    = count($this->db->get_where('tbl_pengajuan', ['status_pengajuan' => 'DITOLAK'])->result());
-            // echo "<pre>";
-            // var_dump($jml_pengjauan, $jml_verifikasi, $jml_diterima, $jml_ditolak);
-            // die;
+            $data_odp = $this->db->get_where('tbl_opd', ['status' => 'ADA'])->result();
+            // $data_pengajuan = $this->db->getDataPengajuan();
+            // $data_review    = $this->db->getDataReview();
+            // $data_diterima  = $this->db->getDataPengajuanDiterima();
+            // $data_ditolak   = $this->db->getDataPengajuanDitolak();
             $data = array(
                 'judul'   => 'BERANDA',
                 'folder'  => 'beranda',
@@ -30,7 +32,8 @@ class ControllerBeranda extends CI_Controller
                 'jml_pengjauan'    => $jml_pengjauan,
                 'jml_verifikasi'   => $jml_verifikasi,
                 'jml_diterima'     => $jml_diterima,
-                'jml_ditolak'      => $jml_ditolak
+                'jml_ditolak'      => $jml_ditolak,
+                'opd'              => $data_odp
             );
             $this->load->view('agendaris/include/index', $data);
         else :
