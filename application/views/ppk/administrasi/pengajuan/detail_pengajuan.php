@@ -7,13 +7,13 @@
                 <div class="col-sm-6">
                     <h1>DETAIL PENGADAAN BARANG & JASA</h1>
                 </div>
-                <?php if ($data_ketua['status_ba'] != 'KONFIRMASI') : ?>
+                <?php if ($data_ketua['status_ba'] != 'KONFIRMASI' and $data_ketua != null) : ?>
                     <div class="col-sm-6">
                         <a class="btn btn-primary" style="position: absolute; right:20px; top: 5px;" target="_BLANK" href="<?= base_url('agendaris/administrasi/berita_acara/' . $data_ketua['id_pengajuan'] . '') ?>"> Berita Acara</a>
                     </div>
                 <?php endif; ?>
             </div>
-        </div><!-- /.container-fluid -->
+        </div><!-- /.container-fluid  -->
     </section>
     <!-- Main content -->
     <section class="content">

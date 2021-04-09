@@ -77,6 +77,8 @@ class ControllerAdministrasi extends CI_Controller
             $data_berkas    = $this->db->get_where('tbl_berkas', ['id_pengajuan' => $id_pengajuan])->result();
             $data_konfirmasi = $this->select_model->getDataKonfirmasi($id_pengajuan);
             $data_ketua     = $this->select_model->getDataKetuaPokja($id_pengajuan);
+            // var_dump($data_ketua);
+            // die;
             $jml_berkas     = count($data_berkas);
             $data = array(
                 'judul'          => 'ADMINISTRASI',

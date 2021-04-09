@@ -109,14 +109,14 @@
                     <input id="id_pengajuan" name="id_pengajuan" readonly value="<?= $data_pengajuan['id_pengajuan'] ?>" type=" text" value="" class="form-control" placeholder="Masukkan Nama Kegiatan" required>
                 </div>
                 <div class="form-group">
+                    <label for="exampleFormControlFile1">Surat Permohonan Tender</label>
+                    <input type="file" class="form-control" id="berkas[]" name="berkas[]" required>
+                    <input type="text" name="keterangan[]" hidden id="keterangan[]" value="Surat Permohonan Tender">
+                </div>
+                <div class="form-group">
                     <label for="exampleFormControlFile1">SK penetapan PPK (yang masih berlaku)</label>
                     <input type="file" class="form-control" id="berkas[]" name="berkas[]" required>
                     <input type="text" name="keterangan[]" hidden id="keterangan[]" value="SK penetapan PPK (yang masih berlaku)">
-                </div>
-                <div class="form-group">
-                    <label for="exampleFormControlFile1">Dokumen Anggaran Belanja (RKA/DPA)</label>
-                    <input type="file" class="form-control" id="berkas[]" name="berkas[]" required>
-                    <input type="text" name="keterangan[]" hidden id="keterangan[]" value="Dokumen Anggaran Belanja (RKA/DPA)">
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlFile1">Dokumen Anggaran Belanja (RKA/DPA)</label>
@@ -130,22 +130,22 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlFile1">Spesifikasi teknis ( untuk pekerjaan Jasa Konstruksi, Jasa Lainnya dan Pengadaan Barang)</label>
-                    <input type="file" class="form-control" id="berkas[]" name="berkas[]" required>
+                    <input type="file" class="form-control" id="berkas[]" name="berkas[]">
                     <input type="text" name="keterangan[]" hidden id="keterangan[]" value="Spesifikasi teknis ( untuk pekerjaan Jasa Konstruksi, Jasa Lainnya dan Pengadaan Barang)">
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlFile1">Kerangka Acuan Kerja (untuk pekerjaan Jasa Konsultansi)</label>
-                    <input type="file" class="form-control" id="berkas[]" name="berkas[]" required>
+                    <input type="file" class="form-control" id="berkas[]" name="berkas[]">
                     <input type="text" name="keterangan[]" hidden id="keterangan[]" value="Kerangka Acuan Kerja (untuk pekerjaan Jasa Konsultansi)">
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlFile1">Salinan Perijinan ( ijin lokasi, IMD dll)</label>
-                    <input type="file" class="form-control" id="berkas[]" name="berkas[]" required>
+                    <input type="file" class="form-control" id="berkas[]" name="berkas[]">
                     <input type="text" name="keterangan[]" hidden id="keterangan[]" value="Salinan Perijinan ( ijin lokasi, IMD dll)">
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlFile1">Dokumen lain ( Sesuai jenis pengadaan barang/jasanya)</label>
-                    <input type="file" class="form-control" id="berkas[]" name="berkas[]" required>
+                    <input type="file" class="form-control" id="berkas[]" name="berkas[]">
                     <input type="text" name="keterangan[]" hidden id="keterangan[]" value="Dokumen lain ( Sesuai jenis pengadaan barang/jasanya)">
                 </div>
             </div>

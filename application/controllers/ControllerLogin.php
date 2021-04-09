@@ -4,11 +4,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class ControllerLogin extends CI_Controller
 {
-    function __construct()
-    {
-        parent::__construct();
-        $this->load->model('select_global');
-    }
+
     // Tampilan Login
     public function index()
     {
@@ -78,7 +74,11 @@ class ControllerLogin extends CI_Controller
     public function opd()
     {
         # code...
-        $this->load->view('opd');
+        $data_odp = $this->db->get_where('tbl_opd', ['status' => 'ADA'])->result();
+        $data = array(
+            'opd'     => $data_odp
+        );
+        $this->load->view('opd', $data);
     }
     public function persyaratan()
     {

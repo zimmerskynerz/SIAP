@@ -92,15 +92,11 @@
 					<div class="wsmainwp clearfix">
 						<!-- LOGO IMAGE -->
 						<!-- For Retina Ready displays take a image with double the amount of pixels that your image will be displayed (e.g 334 x 80 pixels) -->
-						<div class="desktoplogo"><a href="#hero-10" class="logo-black"><img src="<?= base_url('assets/utama/') ?>images/logo.png" width="162" height="40" alt="header-logo"></a></div>
-						<div class="desktoplogo"><a href="#hero-10" class="logo-white"><img src="<?= base_url('assets/utama/') ?>images/logo-white.png" width="162" height="40" alt="header-logo"></a></div>
-
-
+						<div class="desktoplogo"><a href="<?= base_url() ?>" class="logo-black"><img src="<?= base_url('assets/utama/') ?>images/logo.png" width="162" height="40" alt="header-logo"></a></div>
+						<div class="desktoplogo"><a href="<?= base_url() ?>" class="logo-white"><img src="<?= base_url('assets/utama/') ?>images/logo-white.png" width="162" height="40" alt="header-logo"></a></div>
 						<!-- MAIN MENU -->
 						<nav class="wsmenu clearfix blue-header">
 							<ul class="wsmenu-list">
-
-
 								<!-- SIMPLE NAVIGATION LINK -->
 								<li class="nl-simple" aria-haspopup="true"><a href="<?= base_url('tentang') ?>">Tentang</a></li>
 								<li class="nl-simple" aria-haspopup="true"><a href="<?= base_url('alur-pengajuan') ?>">Alur Pengajuan</a></li>
@@ -111,17 +107,8 @@
 										<i class="fas fa-phone-square-alt"></i> 855-569-7890
 									</a>
 								</li>
-
-
-								<!-- HEADER BUTTON 
-								    <li class="nl-simple" aria-haspopup="true">
-								    	<a href="#" class="btn btn-primary tra-white-hover last-link">Get In Touch</a>
-								    </li> -->
-
-
 							</ul>
 						</nav> <!-- END MAIN MENU -->
-
 					</div>
 				</div> <!-- END NAVIGATION MENU -->
 
